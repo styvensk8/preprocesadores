@@ -1,0 +1,11 @@
+-var name = "Preprocesadores"
+-var title = "Titulo principal"
+-var usuario = "styven"
+-var cardtitle = ["Tarjeta uno", "Tarjeta dos", "Tarjeta tres"]
+-var info = ["Acerca", "Noticias","Contacto"]
+mixin card(picture, title, text)
+    .box
+        .box__picture(): img(src="", alt="")
+        .box__container 
+            h3 #{title} 
+            p #{text}
