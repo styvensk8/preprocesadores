@@ -1,6 +1,7 @@
 -var name = "Preprocesadores"
 -var title = "Titulo principal"
--var subtitle = ["Uno", "Dos"]
+-var usuario = "styven"
+-var links = ["Uno", "Dos"]
 doctype html
 html(lang="en")
     head
@@ -12,7 +13,10 @@ html(lang="en")
     body
     header
         h1= name
-        a.button Inicio
+        if usuario 
+            a Hola #{usuario}
+        else
+            a.button Inicio
     section.intro 
         div.intro__picture: img(src="", alt="")
         .intro__text 
@@ -22,3 +26,7 @@ html(lang="en")
         a.button Leer mas
     main
     footer
+        h4 #{name}
+        ul 
+            each link in links
+                li link
