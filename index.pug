@@ -1,7 +1,14 @@
 -var name = "Preprocesadores"
 -var title = "Titulo principal"
 -var usuario = "styven"
--var links = ["Uno", "Dos"]
+-var cardtitle = ["Tarjeta uno", "Tarjeta dos", "Tarjeta tres"]
+-var info = ["Acerca", "Noticias","Contacto"]
+mixin card(picture, title, text)
+    .box
+        .box__picture(): img(src="", alt="")
+        .box__container 
+            h3 #{title} 
+            p #{text}
 doctype html
 html(lang="en")
     head
@@ -24,9 +31,13 @@ html(lang="en")
         p Lorem Ipsum is simply dummy text of the printing and typesetting industry
             span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         a.button Leer mas
-    main
+    main.main_container
+        section.container_cards
+            +card('',cardtitle[0],'Proin dapibus massa nisl, nec fringilla elit laoreet nec. Pellentesque ultricies augue pharetra, bibendum elit nec, faucibus ex.')
+            +card('',cardtitle[1],'Donec imperdiet, nulla eget suscipit dapibus, arcu nibh pharetra magna, a rutrum sem est nec nunc.')
+            +card('',cardtitle[2],'Aliquam fermentum turpis sit amet dui efficitur, eget placerat lectus convallis.')
     footer
         h4 #{name}
         ul 
-            each link in links
-                li link
+            each link in info
+                li #{link}
