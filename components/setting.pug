@@ -3,9 +3,10 @@
 -var usuario = "styven"
 -var cardtitle = ["Tarjeta uno", "Tarjeta dos", "Tarjeta tres"]
 -var info = ["Acerca", "Noticias","Contacto"]
-mixin card(picture, title, text)
+mixin card(picture, categorie, title, text)
     .box
-        .box__picture(): img(src="", alt="")
+        .box__picture(): img(src="../assets/"+picture, alt="")
         .box__container 
+            span.box__categorie #{categorie}
             h3 #{title} 
             p #{text}
