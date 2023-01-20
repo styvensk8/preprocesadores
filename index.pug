@@ -1,3 +1,6 @@
+-var name = "Preprocesadores"
+-var title = "Titulo principal"
+-var subtitle = ["Uno", "Dos"]
 doctype html
 html(lang="en")
     head
@@ -8,12 +11,12 @@ html(lang="en")
         link(rel="stylesheet", href="")
     body
     header
-        h1 Titulo
+        h1= name
         a.button Inicio
     section.intro 
         div.intro__picture: img(src="", alt="")
         .intro__text 
-        h2 subtitulo 
+        h2 #{title}
         p Lorem Ipsum is simply dummy text of the printing and typesetting industry
             span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         a.button Leer mas
