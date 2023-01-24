@@ -1,0 +1,46 @@
+.content--box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.box {
+	min-width: 320px;
+	max-width: 380px;
+	margin: 0 auto;
+	&__picture {
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__container {
+		padding: 25px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		background-color: @color-white;
+	}
+	span {
+		color: @color-purple;
+	}
+	a {
+		text-decoration: none;
+		color: @color-blue;
+	}
+}
+
+@media (min-width: 990px) {
+	.content--box {
+		flex-direction: row;
+	}
+	.box {
+		width: 320px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.box {
+		width: 380px;
+	}
+}

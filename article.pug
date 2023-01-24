@@ -1,14 +1,14 @@
 extend components/template.pug
 block content
     section.intro
-        .intro__picture: img(src="../assets/intro.jpg")
         .intro__content
             span.intro__categorie Noticias
             h1.intro__title Cyberpunk 2077 tiene tres prólogos distintos
-        .intro__author
-            img(src="../assets/avatar.jpg")
-            span.intro__author-title Autor
-            span.intro__author-name John Wick
+            .intro__author
+                img(src="../assets/avatar.jpg")
+                div 
+                    span.intro__author-title Autor
+                    span.intro__author-name John Wick
     article.article--principal
         p.article--principal__intro En Cyberpunk 2077 los jugadores podrán seleccionar entre tres historias de origen diferentes, cada una presentando una ubicación de partida distinta para su personaje.
         p Conversando con VG247, el diseñador Pawel Sasko explicó un sistema que CD Projekt RED llama "Lifepaths" (caminos de vida), que en la práctica suena muy similar a las historias sobre el origen del personaje de Dragon Age: Origins.

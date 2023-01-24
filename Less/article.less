@@ -1,0 +1,32 @@
+.article--principal {
+	width: 100%;
+	padding: 10px;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	h2 {
+		margin: 40px 0;
+		font-size: 30px;
+		text-align: center;
+	}
+	h3 {
+		color: @color-purple;
+	}
+	&__intro {
+		.font(25px);
+	}
+}
+
+@media (min-width: 720px) {
+	.article--principal {
+		width: 80%;
+		margin: 20px auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.article--principal {
+		width: 70%;
+	}
+}

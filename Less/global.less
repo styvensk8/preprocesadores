@@ -2,6 +2,17 @@
 @color-white: #fff;
 @color-purple: #8841da;
 @color-blue: #012179;
+@text-size: 16px;
+
+.shadow-card {
+	box-shadow: 0px 5px 15px 0px fade(@color-primary, 10%);
+}
+
+/* Funcion con parametro - mixin */
+.font(@font-size) {
+	font-size: @font-size;
+	line-height: @font-size + 10%;
+}
 
 * {
 	box-sizing: border-box;
@@ -10,7 +21,9 @@
 }
 
 body {
+	font-size: 62.5%;
 	font-family: 'Poppins', sans-serif;
+	.font(@text-size);
 }
 
 h1,
@@ -18,5 +31,4 @@ h2,
 h3,
 h4 {
 	text-transform: uppercase;
-	margin: 0;
 }
